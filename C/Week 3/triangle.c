@@ -8,15 +8,11 @@ int main(void) {
     scanf("%d%d%d", &a, &b, &c);
 
     if (a > 0 && b > 0 && c > 0) {
-        if ((a + b) > c || (a + c) > b || (b + c) > c) {
-            if ((a + b) > abs(a - b) || (a + c) > abs(c - a) || (b + c) > abs(b - c)) {
+        if ((a + b) > c && abs(a - b) || (a + c) > b && abs(c - a) || (b + c) > c && abs(b - c)) {
                 printf("True\n");
             }
         }
         else {
             printf("False\n");
         }
-
-        scanf("%d%d%d", &a, &b, &c);
     }
-}

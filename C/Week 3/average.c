@@ -1,21 +1,13 @@
 #include <stdio.h>
 
 int main(void) {
-    int count, scannum, totalnum, total;
-    int array[1000];
-    int i = 0, j = 0;
-    int average;
+    int count, i, total = 0, average, number;
 
     scanf("%d", &count);
 
-    for(scannum = 0; scannum < count; ++scannum) {
-        scanf("%d", &array[i]);
-        ++i;
-    }
-
-    for(totalnum = 0; totalnum < count; ++totalnum) {
-        total += array[j];
-        ++j;
+    for(i = 0; i < count; i++) {
+        scanf("%d", &number);
+        total = total + number;
     }
 
     average = total / count;
