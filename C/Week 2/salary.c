@@ -3,7 +3,7 @@
 
 int main() {
     int hours = 0, exhours;
-    float salary = 0.0, exsalary, total;
+    float salary = 0.0, exsalary = 0, total;
 
     scanf("%d", &hours);
 
@@ -14,18 +14,12 @@ int main() {
             exhours = hours - 40;
             exsalary = salary * 1.5;
             exsalary = exsalary * exhours;
-            hours = 40;
-            salary = salary * hours;
-            total = salary + exsalary;
-
-            printf("Salary is $%.2f\n", total);
+            hours = hours - exhours;
         }
 
-        else {
-            total = salary * hours;
+        total = (salary * hours) + exsalary;
 
-            printf("Salary is $%.2f\n", total);
-        }
+        printf("Salary is $%.2f\n", total);
 
         scanf("%d", &hours);
     }
