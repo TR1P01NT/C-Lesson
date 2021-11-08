@@ -1,37 +1,29 @@
 #include <stdio.h>
 
-int main(void)
-{
+int main(void) {
     int count = 1;
     double hours, service = 0.50, total = 0, fee = 0;
 
-    do
-    {
+    do {
         scanf("%lf", &hours);
 
         fee += (hours * service);
 
-        if (hours >= 24)
-        {
-            do
-            {
+        if (hours >= 24) {
+            do {
                 hours -= 24;
                 fee += 50;
             } while (hours >= 24);
 
-            if (hours > 0 && hours < 24)
-            {
+            if (hours > 0 && hours < 24) {
                 fee += 50;
             }
         }
-        else
-        {
-            if (hours <= 8)
-            {
+        else {
+            if (hours <= 8) {
                 fee += 25;
             }
-            else if (hours <= 23)
-            {
+            else if (hours <= 23) {
                 fee += 50;
             }
         }
