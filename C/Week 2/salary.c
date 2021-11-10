@@ -2,34 +2,26 @@
 #include<stdlib.h>
 
 int main() {
-    int hours, exhours;
-    float salary, exsalary, total;
+    int hours = 0, exhours;
+    float salary = 0.0, exsalary = 0, total;
 
-    while (hours != EOF) {
-        scanf("%d", &hours);
+    scanf("%d", &hours);
 
-        if (hours == -1) {
-            exit(0);
-        }
-
+    while (hours != -1) {
         scanf("%f", &salary);
 
         if (hours > 40) {
             exhours = hours - 40;
             exsalary = salary * 1.5;
             exsalary = exsalary * exhours;
-            hours = 40;
-            salary = salary * hours;
-            total = salary + exsalary;
-
-            printf("Salary is $%.2f\n", total);
+            hours = hours - exhours;
         }
 
-        else {
-            total = salary * hours;
+        total = (salary * hours) + exsalary;
 
-            printf("Salary is $%.2f\n", total);
-        }
+        printf("Salary is $%.2f\n", total);
+
+        scanf("%d", &hours);
     }
 
     return 0;

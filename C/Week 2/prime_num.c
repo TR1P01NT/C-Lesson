@@ -1,21 +1,17 @@
 #include <stdio.h>
 
-int main(void) {
-    int prime, i, flag = 0;
+int main() {
+    int prime, i;
 
     scanf("%d", &prime);
 
     for (i = 2; i <= prime/2; i++) {
         if (prime % i == 0) {
-            flag = 1;
+            printf("False\n");
+            return 0;
         }
     }
 
-    if (flag == 1) {
-        printf("False\n");
-    }
-
-    else {
-        printf("True\n");
-    }
+    printf("True\n");
+    return 0;
 }
