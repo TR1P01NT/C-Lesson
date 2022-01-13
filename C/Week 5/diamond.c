@@ -1,36 +1,37 @@
 #include <stdio.h>
 
-int main() {
-    int i, j;
-    double rows;
+int main(void) {
+    int line = 0;
 
-    scanf("%lf", &rows);
+    scanf("%d", &line);
 
-    while(rows != -1) {
-        double num = (rows / 2) + 0.5;
-        int x = rows / 2;
-        for (i = 1; i <= num; i++) {
-            for (j = 1; j <= num - i; j++) {
-                printf(" ");
-            }
+    int space = line - 1;
 
-            for (j = 1; j <= (2 * i) - 1; j++) {
-                printf("*");
-            }
-            printf("\n");
+    for (int i = 1; i <= line; i++) {
+        for (int j = 1; j <= space; j++) {
+            printf(" ");
         }
 
-        for (i = 1; i <= x; i++) {
-            for (j = 1; j <= i; j++) {
-                printf(" ");
-            }
-
-            for (j = 1; j <= 2 * (num - i) - 1; j++) {
-                printf("*");
-            }
-            printf("\n");
+        for (int k = 1; k <= (2 * i)- 1; k++) {
+            printf("*");
         }
 
-        scanf("%lf", &rows);
+        printf("\n");
+        space--;
+    }
+
+    space = 1;
+
+    for (int i = 1; i <= line - 1; i++) {
+        for (int j = 1; j <= space; j++) {
+            printf(" ");
+        }
+
+        for (int k = 1; k <= (2 * (line - i)) - 1; k++) {
+            printf("*");
+        }
+
+        printf("\n");
+        space++;
     }
 }

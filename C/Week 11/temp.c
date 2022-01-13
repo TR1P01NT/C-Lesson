@@ -5,7 +5,7 @@ int main(void) {
 
     scanf("%d", &time);
 
-    float temp[time][4], average[1][4] = {0 ,0 ,0, 0}, daily[1][time], min, max;
+    float temp[time][4], average[1][4] = {0 ,0 ,0, 0}, daily[1][time], min = 100, max = 0;
 
     for (i = 0; i < time; i++) {
         daily[0][i] = 0;
@@ -14,7 +14,6 @@ int main(void) {
     for (i = 0; i < time; i++) {
         for (j = 0; j < 4; j++) {
             scanf("%f", &temp[i][j]);
-            max = 0;
             if (temp[i][j] > max) {
                 max = temp[i][j];
                 max1 = i;
@@ -28,7 +27,6 @@ int main(void) {
             average[0][x] += temp[i][x];
         }
         average[0][x] /= time;
-        min = 100;
         if (average[0][x] < min) {
             min = average[0][x];
             day = x;
