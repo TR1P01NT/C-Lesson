@@ -13,15 +13,10 @@ int main(void) {
             scanf("%lld", &transaction[i]);
         }
 
-        for (int i = 0; i < house; i++) {
-            for (int j = i + 1; j < house; j++) {
-                work += llabs(transaction[j - 1]);
-                transaction[j] += transaction[j - 1];
-                transaction[j - 1] = 0;
-            }
-            if (work > 0) {
-                break;
-            }
+        for (int j = 1; j < house; j++) {
+          work += llabs(transaction[j - 1]);
+          transaction[j] += transaction[j - 1];
+          transaction[j - 1] = 0;
         }
 
         printf("%lld\n", work);
