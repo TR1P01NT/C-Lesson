@@ -15,6 +15,7 @@ struct node *insertnode(struct node *node, int val);
 struct node *createnode(int val);
 // int searchnode(struct node *root, int val);
 int checknum(int val);
+void inorder(int count);
 
 int main(void)
 {
@@ -23,9 +24,10 @@ int main(void)
     int num;
     int flag = 0;
     int i = 0;
+    int count = 0;
 
     for (int x = 0; x < 100; x++) {
-        past[x] = -99;
+        past[x] = -1;
     }
 
     scanf("%d", &choice);
@@ -38,11 +40,13 @@ int main(void)
             scanf("%d", &num);
             root = insertnode(root, num);
             past[i++] = num;
+            count++;
             break;
         case 2:
             scanf("%d", &num);
             root = insertnode(root, num);
             past[i++] = num;
+            count++;
             break;
         case 3:
             scanf("%d", &num);
@@ -55,8 +59,9 @@ int main(void)
             }
             break;
         case 4:
-            inorderTraversal(root);
-            printf("\n");
+            // inorderTraversal(root);
+            inorder(count);
+            // printf("\n");
             break;
         }
 
@@ -125,4 +130,50 @@ int checknum(int val) {
         }
     }
     return 0;
+}
+
+void inorder(int count) {
+    int out[100];
+
+    for (int i = 0; i < count; i++) {
+        out[i] = past[i];
+    }
+
+    for (int i = 0; i < count; i ++)  
+    {  
+        for (int j = i + 1; j < count; j++)  
+        {  
+            if (out[i] == out[j])  
+            {  
+                for (int k = j; k < count - 1; k++)  
+                {  
+                    out[k] = out[k + 1];  
+                }  
+                count--;  
+                  
+                j--;      
+            }  
+        }  
+    }  
+
+    int tmp;
+
+    for (int i = 0; i < count; ++i) 
+        {
+            for (int j = i + 1; j < count; ++j) 
+            {
+                if (out[i] < out[j]) 
+                {
+                    tmp = out[i];
+                    out[i] = out[j];
+                    out[j] = tmp;
+                }
+            }
+        }
+
+    for (int i = 0; i < count - 1; i++) {
+        printf("%d ", out[i]);
+    }
+
+    printf("%d\n", out[count - 1]);
 }
