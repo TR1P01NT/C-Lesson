@@ -8,16 +8,17 @@ struct node
     struct node *right;
 };
 
-int past[100];
+int past[100] = {0};
+int check[10];
+int kit = 0;
 
-void inorderTraversal(struct node *root);
-struct node *insertnode(struct node *node, int val);
 struct node *createnode(int val);
+struct node *insertnode(struct node *node, int val);
 int checknum(int val);
-void inorder(int count);
-int getRightMin(struct node *root);
 struct node *removeNode(struct node *root, int val);
-void removePast(int val, int count);
+int getRightMin(struct node *root);
+void inorderTraversal(struct node *root);
+void printout();
 
 int main(void)
 {
@@ -27,10 +28,6 @@ int main(void)
     int flag = 0;
     int i = 0;
     int count = 0;
-
-    for (int x = 0; x < 100; x++) {
-        past[x] = -1;
-    }
 
     scanf("%d", &choice);
 
@@ -53,8 +50,6 @@ int main(void)
         case 3:
             scanf("%d", &num);
             root = removeNode(root, num);
-            past[i++] = num;
-            removePast(num, count);
             count--;
             break;
         case 4:
@@ -68,9 +63,9 @@ int main(void)
             }
             break;
         case 5:
-            // inorderTraversal(root);
-            inorder(count);
-            // printf("\n");
+            kit = 0;
+            inorderTraversal(root);
+            printout();
             break;
         }
 
@@ -80,10 +75,19 @@ int main(void)
 
 void inorderTraversal(struct node *root) {
     if (root != NULL) {
-        inorderTraversal(root->right);
-        printf("%d ", root->data);
         inorderTraversal(root->left);
+        check[kit++] = root->data;
+        inorderTraversal(root->right);
     }
+}
+
+void printout() {
+    for (int x = 0; x < kit - 1; x++) {
+        printf("%d ", check[x]);
+    }
+
+    printf("%d\n", check[kit - 1]);
+
 }
 
 struct node *createnode(int val) {
@@ -122,52 +126,6 @@ int checknum(int val) {
         }
     }
     return 0;
-}
-
-void inorder(int count) {
-    int out[100];
-
-    for (int i = 0; i < count; i++) {
-        out[i] = past[i];
-    }
-
-    for (int i = 0; i < count; i ++)  
-    {  
-        for (int j = i + 1; j < count; j++)  
-        {  
-            if (out[i] == out[j])  
-            {  
-                for (int k = j; k < count - 1; k++)  
-                {  
-                    out[k] = out[k + 1];  
-                }  
-                count--;  
-                  
-                j--;      
-            }  
-        }  
-    }  
-
-    int tmp;
-
-    for (int i = 0; i < count; ++i) 
-        {
-            for (int j = i + 1; j < count; ++j) 
-            {
-                if (out[i] < out[j]) 
-                {
-                    tmp = out[i];
-                    out[i] = out[j];
-                    out[j] = tmp;
-                }
-            }
-        }
-
-    for (int i = 0; i < count - 1; i++) {
-        printf("%d ", out[i]);
-    }
-
-    printf("%d\n", out[count - 1]);
 }
 
 int getRightMin(struct node *root)
@@ -223,17 +181,4 @@ struct node *removeNode(struct node *root, int val)
     }
 
     return root;
-}
-
-void removePast(int val, int count) {
-    int i;
-    for (i = 0; i < count; i++) {
-        if (past[i] == val) {
-            past[i] = -1;
-
-            for (int j = i; j < count; j++) {
-                past[j] = past[j + 1];
-            }
-        }
-    }
 }
