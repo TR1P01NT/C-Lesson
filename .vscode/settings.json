@@ -4,6 +4,7 @@
         "fscore"
     ],
     "files.associations": {
-        "istream": "cpp"
+        "istream": "cpp",
+        "stdlib.h": "c"
     }
 }
