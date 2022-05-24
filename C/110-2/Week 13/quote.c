@@ -7,10 +7,6 @@ int main(void) {
     int flag = 1;
 
     while ((c = getchar()) != EOF) {
-        // if (c == '\n') {
-        //     flag = 1;
-        // }
-
         if (c == '"') {
             if (flag) {
                 flag = 0;
