@@ -2,6 +2,8 @@
 #include <ctype.h>
 #include <stdbool.h>
 
+//cool and uncool number
+
 int main(void) {
     int t;
     int testcase = 1;

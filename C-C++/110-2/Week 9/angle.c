@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <math.h>
 
+//degree angle
+
 int main(void) {
     int h, m;
     float angle = 0;

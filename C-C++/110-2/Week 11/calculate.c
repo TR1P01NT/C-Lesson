@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//calculate modular (linked list to store information)
+
 struct node {
     long long int data;
     struct node *next;

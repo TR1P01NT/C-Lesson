@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <math.h>
 
+//happy and unhappy number
+
 int calculate(int n) {
     int total = 0, digit;
     while (1) {

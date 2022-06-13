@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//binary tree with inorder printout
+
 struct node
 {
     int data;

@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//economy and wine
+
 int main(void) {
     int house;
     long long int transaction[1000001];

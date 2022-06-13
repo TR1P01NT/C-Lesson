@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//binary tree without deletion
+
 struct node
 {
     int data;

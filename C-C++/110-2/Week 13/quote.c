@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 
+//double and single quote characters
+
 int main(void) {
     char line[100];
     char c;

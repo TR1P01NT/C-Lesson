@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include <ctype.h>
 
+//algebra
+
 int main(void) {
     int num[100];
     char calc[100], line[100], answer[100];

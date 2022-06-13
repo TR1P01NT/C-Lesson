@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//captains race for beer
+
 unsigned long long int gcd(unsigned long long int x, unsigned long long int y);
 
 int main(void) {

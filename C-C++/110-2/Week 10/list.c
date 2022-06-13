@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//linked list
+
 struct node {
     int data;
     struct node *next;

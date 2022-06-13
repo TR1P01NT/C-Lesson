@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//(b / 5) - (a / 5) + 1
+
 int main(void) {
     long long int low, high;
 

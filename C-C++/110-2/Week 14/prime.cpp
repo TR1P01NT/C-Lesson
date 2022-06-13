@@ -6,6 +6,8 @@
 #include <iterator>
 using namespace std;
 
+//industrial spying (prime number reconstruction)
+
 const int N = 1e7;
 
 bool check[N];

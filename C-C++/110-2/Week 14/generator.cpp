@@ -1,5 +1,7 @@
 #include <iostream>
 
+//number generator
+
 int main(void) {
     int t;
 

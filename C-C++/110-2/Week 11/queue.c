@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//queue
+
 int queue[5];
 int max = 4;
 int rear = -1;

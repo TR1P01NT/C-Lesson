@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//stack
+
 int stack[5];
 int max = 4;
 int top = -1;

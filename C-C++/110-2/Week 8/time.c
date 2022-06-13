@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//time
+
 int main(void) {
     int h1, m1, h2, m2;
     int time;

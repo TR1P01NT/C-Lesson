@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//australian election
+
 int main(void) {
     int testcase, people;
     int number;

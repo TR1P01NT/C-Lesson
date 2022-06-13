@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//carry operation
+
 unsigned int left[15], right[15];
 
 int main(void) {

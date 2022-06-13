@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//cryptography (prime and emirp)
+
 int isPrime(int x, int y);
 int renum(int x);
 

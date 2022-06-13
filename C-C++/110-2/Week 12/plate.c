@@ -3,6 +3,8 @@
 #include <ctype.h>
 #include <math.h>
 
+//license plate
+
 int main(void) {
     int cases;
     char c;
