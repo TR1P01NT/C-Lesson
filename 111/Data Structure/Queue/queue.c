@@ -67,7 +67,9 @@ int main(void) {
         }
     }
 
-    char duplicate_name[20] = "";
+    char a_duplicate[20] = "";
+    char k_duplicate[20] = "";
+    char b_duplicate[20] = "";
 
     if (a_index == a_counter) {
         printf("A: .\n");
@@ -75,13 +77,13 @@ int main(void) {
     else {
         printf("A:");
         for (int i = a_index; i < a_counter; i++) {
-            if (strcmp(duplicate_name, a[i].name) == 0) {
+            if (strcmp(a_duplicate, a[i].name) == 0) {
                 i++;
                 continue;
             }
 
             printf(" %s", a[i].name);
-            strcpy(duplicate_name, a[i].name);
+            strcpy(a_duplicate, a[i].name);
         }
         printf(".\n");
     }
@@ -92,13 +94,13 @@ int main(void) {
     else {
         printf("K:");
         for (int i = k_index; i < k_counter; i++) {
-            if (strcmp(duplicate_name, k[i].name) == 0) {
+            if (strcmp(k_duplicate, k[i].name) == 0) {
                 i++;
                 continue;
             }
 
             printf(" %s", k[i].name);
-            strcpy(duplicate_name, k[i].name);
+            strcpy(k_duplicate, k[i].name);
         }
         printf(".\n");
     }
@@ -109,13 +111,13 @@ int main(void) {
     else {
         printf("B:");
         for (int i = b_index; i < b_counter; i++) {
-            if (strcmp(duplicate_name, b[i].name) == 0) {
+            if (strcmp(b_duplicate, b[i].name) == 0) {
                 i++;
                 continue;
             }
 
             printf(" %s", b[i].name);
-            strcpy(duplicate_name, b[i].name);
+            strcpy(b_duplicate, b[i].name);
         }
         printf(".\n");
     }
