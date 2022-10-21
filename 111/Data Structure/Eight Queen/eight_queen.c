@@ -214,7 +214,7 @@ bool solveBoardQueen(int row, int n) {
             placements[placed_queen][1] = 0;
             placed--;
         }
-        else if ((i == board_column - 1) && (placed == 0)) {
+        else if ((i == board_column - 1) && (!safe) && (placed == 0)) {
             if (placed_queen != ((board_column < board_row) ? board_column : board_row) - present_queen) {
                 if (solveBoardQueen(row + 1, n)) {
                     return true;
