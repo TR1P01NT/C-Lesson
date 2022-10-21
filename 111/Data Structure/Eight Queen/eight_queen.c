@@ -1,7 +1,7 @@
-//Eight Queen Problem
 #include <stdio.h>
 #include <stdbool.h>
 
+bool isSafe(int column, int row);
 bool safeToPlace(int col, int row);
 bool solveBoard(int row, int n);
 bool solveBoardQueen(int row, int n);
@@ -55,7 +55,8 @@ bool isSafe(int column, int row) {
     int i = 0;
     int j = 0;
 
-    for (i = 0; i < row; i++) {
+    // Check up
+    for (i = row - 1; i >= 0; i--) {
         if (chessboard[i][column] == 1) {
             return false;
         }
@@ -213,7 +214,7 @@ bool solveBoardQueen(int row, int n) {
             placements[placed_queen][1] = 0;
             placed--;
         }
-        else if ((i == board_column - 1) && (!safe) && (placed == 0)) {
+        else if ((i == board_column - 1) && (placed == 0)) {
             if (placed_queen != ((board_column < board_row) ? board_column : board_row) - present_queen) {
                 if (solveBoardQueen(row + 1, n)) {
                     return true;
@@ -231,12 +232,12 @@ void printResult() {
     for (int i = 0; i < placed_queen; i++) {
         printf("%d %d\n", placements[i][1], placements[i][0]);
     }
-    // print chessboard
     
-    // for (int i = 0; i < board_row; i++) {
-    //     for (int j = 0; j < board_column; j++) {
-    //         printf("%d ", chessboard[i][j]);
-    //     }
-    //     printf("\n");
-    // }
+    // print chessboard
+    for (int i = 0; i < board_row; i++) {
+        for (int j = 0; j < board_column; j++) {
+            printf("%d ", chessboard[i][j]);
+        }
+        printf("\n");
+    }
 }
