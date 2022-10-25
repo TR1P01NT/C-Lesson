@@ -185,12 +185,12 @@ bool solveBoardQueen(int row, int n) {
     }
 
     if (board_column < board_row) {
-        if (row == (board_column - present_queen)) {
+        if (row == board_column) {
             return true;
         }
     }
     else {
-        if (row == (board_row - present_queen)) {
+        if (row == board_row) {
             return true;
         }
     }
