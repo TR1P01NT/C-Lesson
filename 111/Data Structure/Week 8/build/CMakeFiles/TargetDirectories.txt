@@ -1,0 +1,3 @@
+/Users/kevlee/Documents/GitHub/C Lesson/111/Data Structure/Week 8/build/CMakeFiles/Week_8.dir
+/Users/kevlee/Documents/GitHub/C Lesson/111/Data Structure/Week 8/build/CMakeFiles/edit_cache.dir
+/Users/kevlee/Documents/GitHub/C Lesson/111/Data Structure/Week 8/build/CMakeFiles/rebuild_cache.dir

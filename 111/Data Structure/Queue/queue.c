@@ -24,22 +24,25 @@ int main(void) {
 
     scanf("%d %d", &time, &people);
 
-    for (; people > 0 || time > 0; time--, people--) {
-        scanf("%s %d %s", &current_input.idol, &current_input.minutes, current_input.name);
+    for (; people > 0 || time > 0; time--) {
+        if (people > 0) {
+            scanf("%s %d %s", &current_input.idol, &current_input.minutes, current_input.name);
 
-        if (current_input.idol == 'A') {
-            a[a_counter] = current_input;
-            a_counter++;
-        } else if (current_input.idol == 'K') {
-            k[k_counter] = current_input;
-            k_counter++;
-        } else if (current_input.idol == 'B') {
-            b[b_counter] = current_input;
-            b_counter++;
-        }
-        
-        if (time <= 0) {
-            break;
+            if (current_input.idol == 'A') {
+                a[a_counter] = current_input;
+                a_counter++;
+            } else if (current_input.idol == 'K') {
+                k[k_counter] = current_input;
+                k_counter++;
+            } else if (current_input.idol == 'B') {
+                b[b_counter] = current_input;
+                b_counter++;
+            }
+            people--;
+            
+            if (time <= 0) {
+                break;
+            }
         }
 
         if (a[a_index].minutes > 0) {

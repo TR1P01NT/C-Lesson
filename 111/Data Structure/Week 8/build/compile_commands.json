@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/Users/kevlee/Documents/GitHub/C Lesson/111/Data Structure/Week 8/build",
+  "command": "/usr/bin/clang   -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -std=gnu11 -o CMakeFiles/Week_8.dir/traversal.c.o -c \"/Users/kevlee/Documents/GitHub/C Lesson/111/Data Structure/Week 8/traversal.c\"",
+  "file": "/Users/kevlee/Documents/GitHub/C Lesson/111/Data Structure/Week 8/traversal.c"
+}
+]
