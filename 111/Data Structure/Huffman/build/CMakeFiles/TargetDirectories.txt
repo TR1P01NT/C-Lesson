@@ -1,0 +1,3 @@
+/Users/kevlee/Documents/GitHub/C Lesson/111/Data Structure/Huffman/build/CMakeFiles/Huffman.dir
+/Users/kevlee/Documents/GitHub/C Lesson/111/Data Structure/Huffman/build/CMakeFiles/edit_cache.dir
+/Users/kevlee/Documents/GitHub/C Lesson/111/Data Structure/Huffman/build/CMakeFiles/rebuild_cache.dir

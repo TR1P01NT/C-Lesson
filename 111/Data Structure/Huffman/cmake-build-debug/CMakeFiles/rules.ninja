@@ -6,7 +6,7 @@
 # It is included in the main 'build.ninja'.
 
 # =============================================================================
-# Project: Week_9
+# Project: Huffman
 # Configurations: Debug
 # =============================================================================
 # =============================================================================
@@ -14,7 +14,7 @@
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__Week_9_Debug
+rule C_COMPILER__Huffman_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -24,7 +24,7 @@ rule C_COMPILER__Week_9_Debug
 #############################################
 # Rule for linking C executable.
 
-rule C_EXECUTABLE_LINKER__Week_9_Debug
+rule C_EXECUTABLE_LINKER__Huffman_Debug
   command = $PRE_LINK && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $FLAGS -Wl,-search_paths_first -Wl,-headerpad_max_install_names $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
   description = Linking C executable $TARGET_FILE
   restat = $RESTAT
@@ -42,7 +42,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = "/Users/kevlee/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/CLion.app/Contents/bin/cmake/mac/bin/cmake" --regenerate-during-build -S"/Users/kevlee/Documents/GitHub/C Lesson/111/Data Structure/Week 9" -B"/Users/kevlee/Documents/GitHub/C Lesson/111/Data Structure/Week 9/cmake-build-debug"
+  command = "/Users/kevlee/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/223.7571.171/CLion.app/Contents/bin/cmake/mac/bin/cmake" --regenerate-during-build -S"/Users/kevlee/Documents/GitHub/C Lesson/111/Data Structure/Huffman" -B"/Users/kevlee/Documents/GitHub/C Lesson/111/Data Structure/Huffman/cmake-build-debug"
   description = Re-running CMake...
   generator = 1
 
