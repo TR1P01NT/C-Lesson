@@ -1,7 +1,7 @@
 [
 {
   "directory": "/Users/kevlee/Documents/GitHub/C Lesson/111/Data Structure/Huffman/build",
-  "command": "/usr/bin/clang   -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk -std=gnu11 -o CMakeFiles/Huffman.dir/huffman.c.o -c \"/Users/kevlee/Documents/GitHub/C Lesson/111/Data Structure/Huffman/huffman.c\"",
+  "command": "/usr/bin/clang   -g -arch arm64 -std=gnu11 -o CMakeFiles/Huffman.dir/huffman.c.o -c \"/Users/kevlee/Documents/GitHub/C Lesson/111/Data Structure/Huffman/huffman.c\"",
   "file": "/Users/kevlee/Documents/GitHub/C Lesson/111/Data Structure/Huffman/huffman.c"
 }
 ]
