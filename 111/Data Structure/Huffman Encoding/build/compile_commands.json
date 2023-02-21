@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/Users/kevlee/Documents/GitHub/C Lesson/111/Data Structure/Huffman Encoding/build",
+  "command": "/usr/bin/clang++   -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -std=gnu++17 -o CMakeFiles/untitled1.dir/main.cpp.o -c \"/Users/kevlee/Documents/GitHub/C Lesson/111/Data Structure/Huffman Encoding/main.cpp\"",
+  "file": "/Users/kevlee/Documents/GitHub/C Lesson/111/Data Structure/Huffman Encoding/main.cpp"
+}
+]
